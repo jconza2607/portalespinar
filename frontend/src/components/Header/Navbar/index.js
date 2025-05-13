@@ -18,7 +18,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="#">
-                Municipalidadd <i className="icofont-rounded-down"></i>
+                Municipalidaddd <i className="icofont-rounded-down"></i>
               </Link>
               <ul className="dropdown">
                 <li>
