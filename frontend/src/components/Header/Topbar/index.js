@@ -23,11 +23,11 @@ export default function Topbar() {
                 <li>
                   <i className="fa fa-envelope"></i>
                   <Link href="mailto:informatica@yourmail.com">
-                    informatica@muniespinar.gob.pe
+                  mesapartesvirtual@muniespinar.gob.pe
                   </Link>
                 </li>
                 <li>
-                <Link href="#">
+                <Link href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=11811" target="_blank" rel="noopener noreferrer">
                   <Image src={ThemeLogopte} alt="#" width={75} height={54} />
                 </Link>
                 </li>
