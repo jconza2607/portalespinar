@@ -19,7 +19,7 @@ export default function Schedule() {
                       <h4>Casos de Emergencia</h4>
                       <ul className="time-sidual">
                         <li className="day">
-                          Jose Lizandro <span>998414139</span>
+                          Carlos Salinas <span>939815332</span>
                         </li>
                         <li className="day">
                           Saturday <span>9.00-18.30</span>
@@ -44,7 +44,7 @@ export default function Schedule() {
                       <h4>Casos de Emergencia</h4>
                       <ul className="time-sidual">
                         <li className="day">
-                          Jose Lizandro <span>998414139</span>
+                          Nike Carlos <span>958006303</span>
                         </li>
                         <li className="day">
                           Saturday <span>9.00-18.30</span>

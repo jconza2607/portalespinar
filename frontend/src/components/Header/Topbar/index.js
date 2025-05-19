@@ -18,7 +18,7 @@ export default function Topbar() {
             <div className="col-lg-12 col-md-7 col-12">
               <ul className="top-contact">
                 <li>
-                  <i className="fa fa-phone"></i>+51 998 414 139
+                  <i className="fa fa-phone"></i>+51 993 429 308
                 </li>
                 <li>
                   <i className="fa fa-envelope"></i>
