@@ -3,6 +3,7 @@ import Link from "next/link";
 
 // Theme Logo
 import ThemeLogopte from "../../../../public/img/pte-logo.png";
+import ThemeLogomdp from "../../../../public/img/mdp.jpg";
 
 export default function Topbar() {
   return (
@@ -29,6 +30,11 @@ export default function Topbar() {
                 <li>
                 <Link href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=11811" target="_blank" rel="noopener noreferrer">
                   <Image src={ThemeLogopte} alt="#" width={75} height={54} />
+                </Link>
+                </li>
+                <li>
+                <Link href="https://facilita.gob.pe/t/2078" target="_blank" rel="noopener noreferrer">
+                <Image src={ThemeLogomdp} alt="#" width={75} height={54} />
                 </Link>
                 </li>
               </ul>
