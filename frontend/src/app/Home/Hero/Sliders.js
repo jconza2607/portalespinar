@@ -16,16 +16,16 @@ export default function Sliders(props) {
       id: "slider1",
       bgImg: HeroBg1,
       title:
-        "We Provide <span>Medical</span> Services <br/> That You Can <span>Trust!</span>",
+        "Sitio en <span>construcción</span>",
       subTitle:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque,<br/>faucibus libero eu, gravida quam. ",
+        "Estamos trabajando para brindarte una mejor experiencia. <br/> Visita nuestro portal oficial.",
       button: {
-        text: "Get Appointment",
-        link: "/appoinment",
+        text: "Ir a gob.pe",
+        link: "https://www.gob.pe/muniespinar",
       },
       button2: {
-        text: "Learn More",
-        link: "/about",
+        text: "Ir a gob.pe",
+        link: "https://www.gob.pe/muniespinar",
       },
     },
     {
