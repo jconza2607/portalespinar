@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
@@ -15,10 +15,9 @@ export default function Sliders(props) {
     {
       id: "slider1",
       bgImg: HeroBg1,
-      title:
-        "Sitio en <span>construcción</span>",
+      title: "Sitio en <span>construcción</span>",
       subTitle:
-        "Estamos trabajando para brindarte una mejor experiencia. <br/> Visita nuestro portal oficial.",
+        "Estamos trabajando para brindarte una mejor experiencia. <br/> en 5 segundos serás redireccionado a nuestro portal oficial.",
       button: {
         text: "Ir a gob.pe",
         link: "https://www.gob.pe/muniespinar",
@@ -56,69 +55,70 @@ export default function Sliders(props) {
         link: "/appoinment",
       },
       button2: {
-        text: "Conatct Now",
+        text: "Contact Now",
         link: "/contact",
       },
     },
   ]);
 
+  // 👉 Redirección automática a los 5 segundos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.location.href = "https://www.gob.pe/muniespinar";
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <>
-      {/* <!-- Slider Area --> */}
-      <section className={sectionName ? sectionName : "slider"}>
-        <Swiper
-          // autoplay={{ delay: 4000 }}
-          modules={[Navigation, Autoplay]}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
-          className="hero-slider"
-        >
-          {heroSliders.map((singleSlider) => (
-            <SwiperSlide
-              className="single-slider"
-              style={{
-                backgroundImage: `url(${singleSlider.bgImg.src})`,
-              }}
-              key={singleSlider.id}
-            >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-7 col-12">
-                    <div className="text ">
-                      <h1
-                        dangerouslySetInnerHTML={{
-                          __html: singleSlider.title,
-                        }} className="text-white"
-                      ></h1>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: singleSlider.subTitle,
-                        }} className="text-white"
-                      ></p>
-                      {/* <!-- Slider Button --> */}
-                      <div className="button">
-                        <a href={singleSlider?.button.link} className="btn">
-                          {singleSlider?.button.text}
-                        </a>
-                        <a
-                          href={singleSlider?.button2.link}
-                          className="btn primary"
-                        >
-                          {singleSlider?.button2.text}
-                        </a>
-                      </div>
+    <section className={sectionName ? sectionName : "slider"}>
+      <Swiper
+        modules={[Navigation, Autoplay]}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        className="hero-slider"
+      >
+        {heroSliders.map((singleSlider) => (
+          <SwiperSlide
+            className="single-slider"
+            style={{
+              backgroundImage: `url(${singleSlider.bgImg.src})`,
+            }}
+            key={singleSlider.id}
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-7 col-12">
+                  <div className="text">
+                    <h1
+                      dangerouslySetInnerHTML={{ __html: singleSlider.title }}
+                      className="text-white"
+                    ></h1>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: singleSlider.subTitle }}
+                      className="text-white"
+                    ></p>
+                    <div className="button">
+                      <a href={singleSlider?.button.link} className="btn">
+                        {singleSlider?.button.text}
+                      </a>
+                      <a
+                        href={singleSlider?.button2.link}
+                        className="btn primary"
+                      >
+                        {singleSlider?.button2.text}
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
-      </section>
-    </>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
+    </section>
   );
 }
